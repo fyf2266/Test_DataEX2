@@ -12,7 +12,6 @@ df1 = pd.read_excel("../data/catering_dish_profit.xls",sheet_name='选课课程'
 print("\n{0}".format(df1))
 '''
 
-
 '''
 data = xlrd.open_workbook('../data/catering_fish_congee.xls')#打开Excel表格
 table1 = data.sheet_by_index(0)#通过索引获取相应Sheet数据
@@ -25,20 +24,17 @@ for i in range(Trow2):
     print(table2.col_values(i))
 '''
 
-
 df = pd.read_excel("../data/catering_dish_profit.xls")
-data = df.ix[0].values  # 读取第一行数据，不包含表头
-# data = df.ix[[1,2]].values # 读取第一行及第二行数据
-# data = df.ix[1,2] #读取第一行第二列的数据
-# data = df.ix[[1,2],['菜品名']]
-# data = df.ix[:,['盈利']]
+data = df.iloc[0].values  # 读取第一行数据，不包含表头
+# data = df.iloc[[1,2]].values # 读取第一行及第二行数据
+# data = df.iloc[1,2] #读取第一行第二列的数据
+# data = df.iloc[[1,2],['菜品名']]
+# data = df.iloc[:,['盈利']]
 print("读取指定行的数据：{0}".format(data))
-print("输出行号列表",df.index.values)
-print("输出列标题",df.columns.values)
-print("输出值",df.sample(1).values)
-print("输出值\n",df['盈利'].values)
-
-
+print("输出行号列表", df.index.values)
+print("输出列标题", df.columns.values)
+print("输出值", df.sample(1).values)
+print("输出值\n", df['盈利'].values)
 
 '''
 df = pd.read_excel("../data/catering_dish_profit.xls")
@@ -48,6 +44,3 @@ for i in df.index.values:
     test_data.append(row_data)
 print("最终数据：{0}".format(test_data))
 '''
-
-
-
