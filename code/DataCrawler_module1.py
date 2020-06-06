@@ -20,6 +20,6 @@ if __name__ == "__main__":
                       "Chrome/83.0.4103.97 Safari/537.36 "
     }
     demo = getHtmlText(url, Chrome_headers)
-    print(demo)
+    # print(demo)
     soup = BeautifulSoup(demo, 'html.parser')
-    # print(soup.prettify())
+    print(soup.prettify())
